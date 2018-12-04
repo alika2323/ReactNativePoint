@@ -33,15 +33,20 @@ export default class Lista extends Component {
 			{
 				this.state.nombres.map((item,index)=>(
 					<TouchableOpacity key = {item.id} onPress = {() => this.alertNombre(item)}>
-					<Text>{item.name}</Text>
+					<Text style={styles.text}>{item.name}</Text>
 					</TouchableOpacity>
-				))
+					))
 			}
-			</View>
-
-			
+			</View>	
 			)
 	}
-
-
 }
+
+const styles = StyleSheet.create({
+	text:{
+		padding: 10,
+		marginTop: 3,
+		backgroundColor: 'pink',
+		alignItems: 'center'
+	}
+})
