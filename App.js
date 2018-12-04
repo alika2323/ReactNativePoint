@@ -1,7 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Presentacional from './src/components/presentacion';
-import Lista from './src/components/Lista'
+import Lista from './src/components/Lista';
+import Inputs from './src/components/Inputs';
 
 export default class App extends React.Component {
   state = {
@@ -23,8 +24,8 @@ export default class App extends React.Component {
       <Presentacional title={this.state.title} cambiarTexto={this.cambiarTexto} />
       <Presentacional title={this.state.parrafo} cambiarTexto={this.cambiarTexto} />
       <Lista/>
-      </View>
-     
+      <Inputs/>
+      </View>  
       </View>
 
 
@@ -38,7 +39,7 @@ const styles=StyleSheet.create({
     flex:1,
     flexDirection: 'row',
     justifyContent: 'space-around',
-    alignItems: 'center'
+    alignItems: 'flex-start'
   }
 })
 
